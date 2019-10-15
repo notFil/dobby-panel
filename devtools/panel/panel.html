@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+    <head>
+            <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="../css/panel.css">
+            <script src="../../jquery/jquery-3.4.1.min.js"></script>
+            <script src="../../bootstrap/js/bootstrap.js"></script>
+            <script src="../panel/crypto/md5.js"></script>
+            <script src="../panel/crypto/sha1.js"></script>
+            <script src="../panel/crypto/sha256.js"></script>
+            <script src="../panel/crypto/rot13.js"></script>
+            <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    </head>
+    <body>
+       <div class="container" id="dob-panel">
+            <div class="row">
+                <div class="col-md-4 col-xs-4" class="dob-controls">
+                    <div class="dob-options-box">
+                            <div class="dob-options-head">Encryption</div>
+                            <div class="dob-options-body">
+                                    <div class="dob-options" id="md5hash">MD5 Hash</div>
+                                    <div class="dob-options" id="sha1hash">SHA1 Hash</div>
+                                    <div class="dob-options" id="sha256hash">SHA256 Hash</div>
+                                    <div class="dob-options" id="rot13">ROT13</div>                                    
+                            </div>
+                       </div>
+                    <div class="dob-options-box">
+                            <div class="dob-options-head">Encoding</div>
+                            <div class="dob-options-body">
+                                    <div class="dob-options" id="b64encode">Base64 Encode</div>
+                                    <div class="dob-options" id="b64decode">Base64 Decode</div>
+                                    <div class="dob-options" id="urlencode">URL Encode</div>
+                                    <div class="dob-options" id="urldecode">URL Decode</div>
+                                    <div class="dob-options" id="htmlencode">HTML Encode</div>
+                                    <div class="dob-options" id="htmldecode">HTML Decode</div>
+                            </div>
+                           
+                    </div>
+                    <div class="dob-options-box">
+                            <div class="dob-options-head">XSS</div>
+                            <div class="dob-options-body">
+                                <div class="dob-options" id="xssalert">XSS Alert</div>
+                        </div>
+                    </div>
+                    <div class="dob-options-box">
+                            <div class="dob-options-head">SQL</div>
+                            <div class="dob-options-body">
+                                <div class="dob-options" id="nil">NIL</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-4" style="margin-bottom: 10px;">
+                    <textarea class = "form-control dob-text-input" name="" id="inputBox" cols="15" rows="3"></textarea>
+                </div>
+                <div class="col-md-4 col-xs-4" id="dob-post-data">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <span class="input-group-text right-label">P</span>
+                            </div>
+                            <textarea class = "form-control dob-text-input" name="" id="outputBox" cols="15" rows="3"></textarea>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="seperator"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-xs-4 dob-buttons">
+                        <input type="checkbox" name="addpost" id="addpost">
+                        <label for="addpost" clas>POST data</label>
+                        <input type="checkbox" name="changereferrer" id="changereferrer">
+                        <label for="changereferrer">HTTP Referrer</label>
+                        <input type="checkbox" name="addcookie" id="addcookie">
+                        <label for="addcookie">COOKIE data</label>
+                </div>
+                <div class="col-md-4 col-xs-4" id="dob-ref-data" style="margin-bottom: 10px;">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <span class="input-group-text right-label">R</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                </div>
+                <div class="col-md-4 col-xs-4" id="dob-cookie-data" style="margin-bottom: 10px;">
+                        <div class="input-group">
+                            <div class="input-group-append">
+                                <span class="input-group-text right-label">C</span>
+                            </div>
+                            <input type="text" name="" id="">
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="seperator"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <button class="panel-btn" id="runbtn">Run</button>
+                    <button class="panel-btn" id="loadURLbtn">Load URL</button>
+                    <button class="panel-btn" id="splitURLbtn">Split URL</button>
+                    <button class="panel-btn" id="clearallbtn">Clear</button>
+                </div>
+            </div>
+       </div>
+       <script src="../panel/panel.js"></script>
+    </body>
+</html>
